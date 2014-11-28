@@ -1,0 +1,37 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'groovy'
+apply plugin: 'cobertura'
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'net.saliman:gradle-cobertura-plugin:2.2.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.7'
+
+    testCompile 'junit:junit:4.11'
+}
+
+cobertura {
+    coverageFormats = ['html']
+    coverageIgnoreTrivial = true
+    coverageReportDir = new File("$buildDir/reports/cobertura")
+}
+
+
+task "create-dir" << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}

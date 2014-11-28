@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="person.PersonTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2014-11-28T13:15:08" hostname="binfang" time="0.0080">
+  <properties/>
+  <testcase name="should_return_fatter_if_BMI_is_equal_24" classname="person.PersonTest" time="0.0060"/>
+  <testcase name="should_return_fatter_if_BMI_is_between_18_and_24" classname="person.PersonTest" time="0.0"/>
+  <testcase name="should_return_fatter_if_BMI_is_less_than_18" classname="person.PersonTest" time="0.0"/>
+  <testcase name="should_return_fatter_if_BMI_is_greater_than_24" classname="person.PersonTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
